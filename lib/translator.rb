@@ -2,11 +2,18 @@
   require "pry"
   require "yaml"
   
+  
 def load_library (file)
   # code goes here
-   emoticons = {get_meaning : {}, get_emoticon : YAML.load_file(file)}
   
-   return emoticons
+  the_file = YAML.load_file(file)
+    # binding.pry
+  the_file.inspect
+  emoticons = { get_meaning: {}, get_emoticon: {}          
+  } 
+              
+  # binding.pry
+   emoticons
      
 end
 
